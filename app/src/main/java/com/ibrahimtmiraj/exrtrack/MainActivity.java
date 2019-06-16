@@ -3,15 +3,15 @@ package com.ibrahimtmiraj.exrtrack;
 import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import android.view.MenuItem;
-import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+public class MainActivity<addExerciseFab> extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
 
     @Override
@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
 
+        //Add ItemSelectedListener to navView
         navView.setOnNavigationItemSelectedListener(this);
 
         //Default Fragment that opens when the app is opened
@@ -71,4 +72,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         //Loads the fragment associated with the pressed menuItem into the frame_container
         return loadFragment(fragment);
     }
+
+    //Listeners on Workout Screen
+
+
+
+
 }
